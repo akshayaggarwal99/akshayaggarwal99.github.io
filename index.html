@@ -1,38 +1,469 @@
----
-layout: default
-title: Finding The Way Home
-cover: 'assets/images/cover1.jpg'
-class: 'home-template'
-comments: true
-navigation: True
-logo: 'assets/images/ghost.png'
-current: home
----
-<!-- < default -->
-<!-- The tag above means - insert everything in this file into the [body] of the default.hbs template -->
 
-<!-- The big featured header  -->
-<header class="main-header {% if page.cover %}"
-        style="background-image: url({{ site.baseurl }}{{ page.cover }}) {% else %}no-cover{% endif %}">
-    <nav class="main-nav overlay clearfix">
-        {% if page.logo %}<a class="blog-logo" href="{{ site.baseurl }}"><img src="{{ site.baseurl }}{{ page.logo }}" alt="Blog Logo" /></a>{% endif %}
-        {% if page.navigation %}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {% endif %}
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">{{ site.name }}</h1>
-            <h2 class="page-description">{{ site.description }}</h2>
-        </div>
-    </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- The main content area on the homepage -->
-<main id="content" class="content" role="main">
+	<title>Welcome to my website</title>
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<link rel="icon" href="images/code.png"/>
 
-    <!-- The tag below includes the post loop - partials/loop.hbs -->
-    {% include loop.html %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="css/animate.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
 
-</main>
+</head>
+<body>
+
+	<div class="preloader">
+			<div class="spinner"><strong>Loading...<i class="fa-li fa fa-spinner fa-spin"></i></strong></div>
+	</div>
+	<div class="preloader-left"></div>
+	<div class="preloader-right"></div>
+
+	<div class="inline-menu-container hidex">
+
+		<ul class="inline-menu">
+			<li class="about menu-item">Resume</li>
+			<li class="portfolio menu-item">Portfolio</li>
+			<li class="contact menu-item">Contact</li>
+			<li id="close">&times;</li>
+		</ul>
+
+	</div>
+
+<section class="home">
+            <div class="container">
+		<div class="name-block">
+			<div class="name-block-container">
+				<h1><span>Hi, I'm</span>Akshay Kumar Aggarwal</h1>
+                                                <h2>Developer + Entrepreneur</h2>
+                                                <a href="/images/myw3schoolsimage.jpg" download="w3logo">
+				<a class="btn btn-download" href="AkshayKumarResume.pdf" download="AkshayKumarResume">Download Resume</a>
+                                                     <ul class="social">
+					<li><a href="https://github.com/akshayaggarwal99"><i class="fa fa-github"></i></a></li>
+					<li><a href="https://www.facebook.com/akshayaggarwal99"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://in.linkedin.com/in/akshayaggarwal99"><i class="fa fa-linkedin"></i></a></li>
+				     </ul>
+
+			</div>
+		</div>
+		<div class="menu-blocks">
+			<div class="about-block">
+				<div class="about-block-container">
+					<h2 class="about menu-item">Resume</h2>
+				</div>
+			</div>
+			<div class="portfolio-block">
+				<div class="portfolio-block-container">
+					<h2 class="portfolio menu-item">Portfolio</h2>
+				</div>
+			</div>
+			<div class="contact-block">
+				<div class="contact-block-container">
+					<h2 class="contact menu-item">Contact</h2>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="content-blocks about hidex">
+
+			<section class="content" id="about">
+
+				<div class="block-content">
+					<h3 class="block-title">Profile</h3>
+					<div class="row">
+						<div class="col-md-7">
+							<p>A results-driven, customer-focused, articulate and analytical android developer who can think “out of the box”. Strong in UX design and problem solving skills. Having good knowledge about programming fundamentals, OOPS concept, etc. Skilled in developing scalable android application. Interested in a challenging technical track career in an application development environment. </p>
+						</div>
+						<div class="col-md-5">
+							<ul class="info-list">
+								<li><strong>Name : </strong>  Akshay Kumar</li>
+								<li><strong>Address : </strong>   F-3, Ravindra Bhawan IIT-Roorkee</li>
+								<li><strong>Email : </strong>  akshayaggarwal99@gmail.com</li>
+								<li><strong>Phone : </strong>   + 91 750 088 1058</li>
+								<li><strong>Area of Interest : </strong>  Product Development</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="block-content ">
+					<h3 class="block-title">Skills</h3>
+					<div class="row">
+						<div class="col-sm-6">
+							<h4>Technical Skills</h4>
+							<label class="progress-bar-label">Programming</label>
+							<div class="progress">
+								<div style="width: 70%;" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+									<span>70%</span>
+								</div>
+							</div>
+							<label class="progress-bar-label">Android Development</label>
+							<div class="progress">
+								<div style="width: 75%;" class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+									<span>75%</span>
+								</div>
+							</div>
+
+							<label class="progress-bar-label">Backend</label>
+							<div class="progress">
+								<div style="width: 60%;" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+									<span>60%</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<h4>Computer Languages &amp Software Packages</h4>
+							<div class="row">
+								<div class="col-sm-6">
+									<ul class="icon-list">
+										<li>Java</li>
+										<li>C++</li>
+										<li>SQL</li>
+									</ul>
+								</div>
+								<div class="col-sm-6">
+									<ul class="icon-list">
+										<li>Android Studio</li>
+										<li>Git</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="block-content ">
+					<h3 class="block-title">Experience</h3>
+					<div class="timeline experience">
+
+						<div class="row ">
+							<div class="col-md-12">
+								<div class="exp-holder">
+
+									<div class="exp">
+										<div class="hgroup">
+											<h4>Software Developer and Coordinator- Mobile Development Group</h4>
+											<h5>Jan 2015 - <span class="current">Current</span></h5>
+										</div>
+										<p><a href="https://mobile.sdslabs.co/">MDG</a> Mobile Development Group at IIT Roorkee is an active student group
+directing its efforts towards creating useful mobile applications.</br>
+- Responsible for range from idea innovation, UI/UX design, app
+development, testing to product launch</br>
+-<a href="https://github.com/sdsmdg">Github</a></p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="block-content">
+					<h3 class="block-title">Education</h3>
+					<div class="timeline education">
+						<div class="row ">
+							<div class="col-md-12">
+								<div class="exp-holder">
+									<div class="exp">
+										<div class="hgroup">
+											<h4>B.Tech. Metallurgy and Materials Engineering – IIT Roorkee </h4>
+											<h5>July 2014 - <span class="current">Current</span></h5>
+										</div>
+										<p>CGPA - 6.73 out of 10.0</p>
+									</div>
+									<div class="exp">
+										<div class="hgroup">
+											<h4>Twelfth – Holy Heart Day Boarding Sen. Sec. Public School, Fazilka </h4>
+											<h5>2012 - 2013</h5>
+										</div>
+										<p>CGPA - 9.6 out of 10.0</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					 </div>
+				</div>
+
+				<!-- <div class="block-content">
+					<h3 class="block-title">Services</h3>
+					<div class="row">
+						<div class="col-sm-4 service">
+							<div class="service-icon">
+								<i class=" fa fa-pencil"></i>
+							</div>
+							<h4>Web Design</h4>
+							<p>Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. </p>
+						</div>
+						<div class="col-sm-4 service">
+							<div class="service-icon">
+								<i class=" fa fa-building"></i>
+							</div>
+							<h4>App Development</h4>
+							<p>Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. </p>
+						</div>
+						<div class="col-sm-4 service">
+							<div class="service-icon">
+								<i class=" fa fa-image"></i>
+							</div>
+							<h4>Graphic Design</h4>
+							<p>Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. </p>
+						</div>
+						<div class="col-sm-4 service">
+							<div class="service-icon">
+								<i class=" fa fa-print"></i>
+							</div>
+							<h4>Print Design</h4>
+							<p>Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. </p>
+						</div>
+						<div class="col-sm-4 service">
+							<div class="service-icon">
+								<i class=" fa fa-image"></i>
+							</div>
+							<h4>Graphic Design</h4>
+							<p>Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. </p>
+						</div>
+						<div class="col-sm-4 service">
+							<div class="service-icon">
+								<i class=" fa fa-print"></i>
+							</div>
+							<h4>Print Design</h4>
+							<p>Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. </p>
+						</div>
+					</div>
+				</div>  -->
+
+				<div class="row text-center">
+						<div class="col-md-12 btn-email">
+							<a class="btn lowercase">akshayaggarwal99@gmail.com</a><br/>
+							<small>Not available for freelance</small>
+						</div>
+					</div>
+
+
+			</section>
+		</div>
+
+		<div class="content-blocks portfolio hidex">
+
+			<section class="content">
+
+				<div class="block-content">
+					<h3 class="block-title">Portfolio</h3>
+					<div class="row">
+						<div class="col-md-12">
+							<ul id="filters">
+							  <li data-filter=".apps">Apps</li>
+							</ul>
+							<div id="projects">
+								  <div class="project graphic apps">
+									<a  href="https://goo.gl/zEA2Zp">
+										<div class="project-overlay">
+											<div class="vcenter">
+												<div class="centrize">
+													<h4>Brain Teaser</h4>
+													<p>Android App</p>
+												</div>
+											</div>
+										</div>
+									</a>
+									<img src="images/1.jpg" alt="">
+								  </div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="row text-center">
+						<div class="col-md-12">
+							<h4>Interested in working together?</h4>
+							<a class="btn lowercase">akshayaggarwal99@gmail.com</a><br/>
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+
+		<div class="content-blocks blog hidex">
+
+			<section class="content">
+				<div class="block-content">
+					<h3 class="block-title">My Blog</h3>
+					<div class="col-md-10 col-md-offset-1">
+							<div class="post">
+								<div class="post-thumbnail">
+									<a class="open-post" href="post-single.html">
+										<img src="images/blog/4.jpg" alt="">
+									</a>
+								</div>
+								<div class="post-title">
+									<a class="open-post" href="post-single.html"><h2>Typography for web</h2></a>
+									<p class="post-info">
+										<span class="post-author">Posted by John Sparrow</span>
+										<span class="slash"></span>
+										<span class="post-date">Dec 08, 2015</span>
+										<span class="slash"></span>
+										<span class="post-catetory">Food</span>
+									</p>
+								</div>
+								<div class="post-body">
+									<p>Omnium nominati prodesset pri no. Per dolor gloriatur<span class="selected"> persequer</span>is ad, te his aliquip molestie. Veri tantas ad usu, mel ne sonet quaeque assueverit. Enim eruditi euripidis his et, dictas admodum posidonium ei pro. An duo tempor maluisset honestatis. Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. Est sint magna mucius te, iudico integre gubergren no vis. Assum doming et pro, est ei inermis corpora argumentum. Eos graece sadipscing et, pri dico salutandi consetetur et, explicari voluptatum mei at. Ex cum nisl epicurei, sea in molestie theophrastus, nibh tollit apeirian no vis. </p>
+									<a class="btn open-post" href="post-single.html">Read More</a>
+								</div>
+							</div>
+							<div class="post">
+								<div class="post-thumbnail">
+									<a class="open-post" href="post-single.html">
+										<img src="images/blog/3.jpg" alt="">
+									</a>
+								</div>
+								<div class="post-title">
+									<a class="open-post" href="post-single.html"><h2>Typography for web</h2></a>
+									<p class="post-info">
+										<span class="post-author">Posted by John Sparrow</span>
+										<span class="slash"></span>
+										<span class="post-date">Dec 08, 2015</span>
+										<span class="slash"></span>
+										<span class="post-catetory">Food</span>
+									</p>
+								</div>
+								<div class="post-body">
+									<p>Omnium nominati prodesset pri no. Per dolor gloriatur<span class="selected"> persequer</span>is ad, te his aliquip molestie. Veri tantas ad usu, mel ne sonet quaeque assueverit. Enim eruditi euripidis his et, dictas admodum posidonium ei pro. An duo tempor maluisset honestatis. Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. Est sint magna mucius te, iudico integre gubergren no vis. Assum doming et pro, est ei inermis corpora argumentum. Eos graece sadipscing et, pri dico salutandi consetetur et, explicari voluptatum mei at. Ex cum nisl epicurei, sea in molestie theophrastus, nibh tollit apeirian no vis. </p>
+									<a class="btn open-post" href="post-single.html">Read More</a>
+								</div>
+							</div>
+							<div class="post">
+								<div class="post-thumbnail">
+									<a class="open-post" href="post-single.html">
+										<img src="images/blog/2.jpg" alt="">
+									</a>
+								</div>
+								<div class="post-title">
+									<a class="open-post" href="post-single.html"><h2>Typography for web</h2></a>
+									<p class="post-info">
+										<span class="post-author">Posted by John Sparrow</span>
+										<span class="slash"></span>
+										<span class="post-date">Dec 08, 2015</span>
+										<span class="slash"></span>
+										<span class="post-catetory">Food</span>
+									</p>
+								</div>
+								<div class="post-body">
+									<p>Omnium nominati prodesset pri no. Per dolor gloriatur<span class="selected"> persequer</span>is ad, te his aliquip molestie. Veri tantas ad usu, mel ne sonet quaeque assueverit. Enim eruditi euripidis his et, dictas admodum posidonium ei pro. An duo tempor maluisset honestatis. Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. Est sint magna mucius te, iudico integre gubergren no vis. Assum doming et pro, est ei inermis corpora argumentum. Eos graece sadipscing et, pri dico salutandi consetetur et, explicari voluptatum mei at. Ex cum nisl epicurei, sea in molestie theophrastus, nibh tollit apeirian no vis. </p>
+									<a class="btn open-post" href="post-single.html">Read More</a>
+								</div>
+							</div>
+							<div class="post">
+								<div class="post-thumbnail">
+									<a class="open-post" href="post-single.html">
+										<img src="images/blog/1.jpg" alt="">
+									</a>
+								</div>
+								<div class="post-title">
+									<a class="open-post" href="post-single.html"><h2>Typography for web</h2></a>
+									<p class="post-info">
+										<span class="post-author">Posted by John Sparrow</span>
+										<span class="slash"></span>
+										<span class="post-date">Dec 08, 2015</span>
+										<span class="slash"></span>
+										<span class="post-catetory">Food</span>
+									</p>
+								</div>
+								<div class="post-body">
+									<p>Omnium nominati prodesset pri no. Per dolor gloriatur<span class="selected"> persequer</span>is ad, te his aliquip molestie. Veri tantas ad usu, mel ne sonet quaeque assueverit. Enim eruditi euripidis his et, dictas admodum posidonium ei pro. An duo tempor maluisset honestatis. Ne cum invidunt constituto, sanctus accusam an usu, ea mandamus incorrupte mel. Pro cu purto graeco. Wisi sonet elitr eos in. Est sint magna mucius te, iudico integre gubergren no vis. Assum doming et pro, est ei inermis corpora argumentum. Eos graece sadipscing et, pri dico salutandi consetetur et, explicari voluptatum mei at. Ex cum nisl epicurei, sea in molestie theophrastus, nibh tollit apeirian no vis. </p>
+									<a class="btn open-post" href="post-single.html">Read More</a>
+								</div>
+							</div>
+
+						<div class="text-center">
+							<ul class="pagination">
+								<li>
+								  <a href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+								  </a>
+								</li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li>
+								  <a href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+								  </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="content-blocks contact hidex">
+
+			<section class="content">
+				<div class="block-content">
+					<h3 class="block-title">Get in touch</h3>
+					<div class="row">
+
+						<div class="col-md-6">
+							<div class="contact-content ">
+								<div class="contact-icon">
+									<i class="fa fa-map-marker"></i>
+								</div>
+								<div class="contact-details">
+									<h5>Address</h5>
+									<p>F-3, Ravindra Bhawan IIT-Roorkee</p>
+								</div>
+							</div>
+							<div class="contact-content ">
+								<div class="contact-icon">
+									<i class="fa fa-phone"></i>
+								</div>
+								<div class="contact-details">
+									<h5>Call Me</h5>
+									<p> +91 - 7500881058</p>
+								</div>
+							</div>
+							<div class="contact-content ">
+								<div class="contact-icon">
+									<i class="fa fa-envelope"></i>
+								</div>
+								<div class="contact-details">
+									<h5>Enquiries</h5>
+									<p>akshayaggarwal99@gmail.com</p>
+								</div>
+							</div>
+
+						</div>
+
+				</div>
+			</section>
+		</div>
+
+
+
+	</div>
+</section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
+<script type="text/javascript" src="js/smooth-scroll.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+ </body>
+</html>
